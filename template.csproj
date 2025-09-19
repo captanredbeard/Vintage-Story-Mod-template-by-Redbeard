@@ -167,7 +167,7 @@
   <Target Name="ZipFilesDev" AfterTargets="Build" Condition=" '$(Configuration)' == 'Debug' and '$(PackageDevBuild)' == 'true'">
     <Message Text="Pachaging into '$(ReleaseFile)'" Importance="high" />
     <Delete Files="$(OutputPath)\$(ModId).dll" Condition="'$(ModType)' != 'code'"/>
-    <Delete Files="$(OutputPath)\$(ModId).pdb" Condition="'$(ModType)' != 'code'"
+    <Delete Files="$(OutputPath)\$(ModId).pdb" Condition="'$(ModType)' != 'code'"/>
     <Delete Files="$(OutputPath)\$(ModId).deps.json" Condition="'$(ModType)' != 'code'" />
     <MakeDir Directories="$(ReleasesDir)" />
     <Delete Files="$(ReleasePathDev)" />
